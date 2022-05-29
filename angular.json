@@ -30,6 +30,11 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/scss"
+              ]
+            },
             "styles": [
               "src/styles.scss"
             ],
@@ -64,6 +69,30 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "qa": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.qa.ts"
+                }
+              ]
+            },
+            "hom": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hom.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -76,6 +105,15 @@
             },
             "development": {
               "browserTarget": "marketplace:build:development"
+            },
+            "dev": {
+              "browserTarget": "marketplace:build:dev"
+            },
+            "qa": {
+              "browserTarget": "marketplace:build:qa"
+            },
+            "hom": {
+              "browserTarget": "marketplace:build:hom"
             }
           },
           "defaultConfiguration": "development"

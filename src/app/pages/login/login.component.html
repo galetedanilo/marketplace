@@ -1,0 +1,40 @@
+<div class="container center-full">
+  <div class="content">
+    <div class="login-box">
+      <div class="login-box__image">f</div>
+      <div class="login-box__form center-full">
+        <h2>Entrar no Sistema</h2>
+        <form [formGroup]="this.loginForm">
+          <div class="form-control">
+            <label>Usuário:</label>
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Digite seu usuário"
+              formControlName="user_name"
+            />
+          </div>
+          <div class="form-control">
+            <label>Senha:</label>
+            <input
+              type="password"
+              name="user_password"
+              placeholder="Digite sua senha"
+              formControlName="user_password"
+            />
+          </div>
+          <div class="login-box__form__actions">
+            <button
+              type="button"
+              (click)="this.onFormSubmit()"
+              [attr.disabled]="this.loginForm.valid ? null : ''"
+            >
+              Entrar
+            </button>
+            <a>Esqueci a senha.</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

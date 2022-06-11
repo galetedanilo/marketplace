@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterModule } from './shared/components/footer/footer.module';
 import { NavbarModule } from './shared/components/navbar/navbar.module';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { NavbarModule } from './shared/components/navbar/navbar.module';
     BrowserModule,
     AppRoutingModule,
     NavbarModule,
-    FooterModule
+    FooterModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent]

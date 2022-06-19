@@ -1,11 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterModule } from './shared/components/footer/footer.module';
-import { NavbarModule } from './shared/components/navbar/navbar.module';
-import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
@@ -15,8 +13,6 @@ import { TranslocoRootModule } from './transloco-root.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NavbarModule,
-    FooterModule,
     HttpClientModule,
     TranslocoRootModule
   ],

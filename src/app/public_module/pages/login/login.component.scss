@@ -1,0 +1,29 @@
+@import 'helper';
+
+section {
+  margin-top: 100px;
+   
+  .form-login {
+    background-color: $base-color;
+    height: 30rem;
+    padding: 2rem;
+    width: 25rem;
+
+    &__title {
+      color: $white-color;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    &__container {
+      padding-top: 2rem;
+      width: 25rem;
+    }
+
+    &__link {
+      color: $white-color;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

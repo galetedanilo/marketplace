@@ -1,0 +1,55 @@
+<section class="content-center">
+  <div class="form-login">
+    <h1 class="form-login__title">Entrar no Sistema</h1>
+    <form class="form-login__container" [formGroup]="loginForm" (ngSubmit)="this.onSubmit()">
+      <div class="form-container__input">
+        <label for="username">Usuario:</label>
+        <input type="email" id="username" formControlName="username" />
+        <div
+          class="form-container__input__error__message"
+          *ngIf="
+            this.loginForm.get('username')?.hasError('required') &&
+            (this.loginForm.controls['username'].touched ||
+              this.loginForm.controls['username'].dirty)
+          "
+        >
+          <span>Campo Obrigatório</span>
+        </div>
+        <div
+          class="form-container__input__error__message"
+          *ngIf="
+            this.loginForm.get('username')?.hasError('email') &&
+            (this.loginForm.controls['username'].touched ||
+              this.loginForm.controls['username'].dirty)
+          "
+        >
+          <span>E-mail invalido</span>
+        </div>
+      </div>
+      <div class="form-container__input">
+        <label for="userpassword">Senha:</label>
+        <input
+          type="password"
+          id="userpassword"
+          formControlName="userpassword"
+        />
+        <div
+          class="form-container__input__error__message"
+          *ngIf="
+            this.loginForm.get('userpassword')?.hasError('required') &&
+            (this.loginForm.controls['userpassword'].touched ||
+              this.loginForm.controls['userpassword'].dirty)
+          "
+        >
+          <span>Campo Obrigatório</span>
+        </div>
+      </div>
+      <div class="form-container__actions">
+        <a class="form-login__link" routerLink="/forgot-password">Esqueci minha senha</a>
+        <button type="submit" [disabled]="this.loginForm.invalid">
+          Entrar
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

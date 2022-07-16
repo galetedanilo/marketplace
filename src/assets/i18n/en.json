@@ -1,1 +1,5 @@
-{}
+{
+  "password": "Password",
+  "required_field": "Required field",
+  "user_name": "User name"
+}

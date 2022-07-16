@@ -1,20 +1,20 @@
 import { NO_ERRORS_SCHEMA } from "@angular/core"
 import { ComponentFixture, TestBed } from "@angular/core/testing"
-import { LoginComponent } from "./login.component"
+import { AuthComponent } from "./auth.component"
 
-describe('LoginComponent', () => {
-  let fixture: ComponentFixture<LoginComponent>;
-  let component: LoginComponent;
+describe('AuthComponent', () => {
+  let fixture: ComponentFixture<AuthComponent>;
+  let component: AuthComponent;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoginComponent],
+      declarations: [AuthComponent],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents()
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LoginComponent);
+    fixture = TestBed.createComponent(AuthComponent);
     component = fixture.componentInstance;
   })
 

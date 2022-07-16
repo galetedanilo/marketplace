@@ -41,6 +41,12 @@
     justify-content: space-between;
     padding-top: 1.5rem;
 
+    &__link {
+      color: $white-color;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
     button[type=submit] {
       font-weight: bold;
       height: 2rem;

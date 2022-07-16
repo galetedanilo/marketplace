@@ -1,0 +1,55 @@
+<section class="content-center">
+  <div class="auth-form">
+    <h1 class="auth-form__title">{{ 'auth.login_in' | transloco }}</h1>
+    <form class="auth-form__container" [formGroup]="this.loginForm" (ngSubmit)="this.onSubmit()">
+      <div class="form-container__input">
+        <label for="user_email">{{ 'user_name' | transloco }}</label>
+        <input type="email" id="user_email" formControlName="user_email" />
+        <div
+          class="form-container__input__error__message"
+          *ngIf="
+            this.loginForm.get('user_email')?.hasError('required') &&
+            (this.loginForm.controls['user_email'].touched ||
+              this.loginForm.controls['user_email'].dirty)
+          "
+        >
+          <span>{{ 'required_field' | transloco }}</span>
+        </div>
+        <div
+          class="form-container__input__error__message"
+          *ngIf="
+            this.loginForm.get('user_email')?.hasError('email') &&
+            (this.loginForm.controls['user_email'].touched ||
+              this.loginForm.controls['user_email'].dirty)
+          "
+        >
+          <span>E-mail invalido</span>
+        </div>
+      </div>
+      <div class="form-container__input">
+        <label for="user_password">{{ 'password' | transloco }}</label>
+        <input
+          type="password"
+          id="user_password"
+          formControlName="user_password"
+        />
+        <div
+          class="form-container__input__error__message"
+          *ngIf="
+            this.loginForm.get('user_password')?.hasError('required') &&
+            (this.loginForm.controls['user_password'].touched ||
+              this.loginForm.controls['user_password'].dirty)
+          "
+        >
+          <span>{{ 'required_field' | transloco }}</span>
+        </div>
+      </div>
+      <div class="form-container__actions">
+        <a class="form-container__actions__link" routerLink="/forgot-password">{{ 'auth.forgot_password' | transloco }}</a>
+        <button type="submit" [disabled]="this.loginForm.invalid">
+          {{ 'auth.login' | transloco }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

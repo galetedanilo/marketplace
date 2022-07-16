@@ -15,9 +15,9 @@ const routes: Routes = [
           import('./pages/home/home.module').then((m) => m.HomeModule),
       },
       {
-        path: 'login',
+        path: 'auth',
         loadChildren: () =>
-          import('./pages/login/login.module').then((m) => m.LoginModule),
+          import('./pages/auth/auth.module').then((m) => m.AuthModule),
       },
       {
         path: 'forgot-password',

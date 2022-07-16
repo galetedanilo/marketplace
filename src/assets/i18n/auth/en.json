@@ -1,5 +1,9 @@
 {
   "forgot_password": "Forgot password",
+  "invalid_email": "Invalid email",
   "login": "Login",
-  "login_in": "Login in"
+  "login_in": "Login in",
+  "password": "Password",
+  "required_field": "Required field",
+  "user_name": "User name"
 }

@@ -3,7 +3,7 @@
     <h1 class="auth-form__title">{{ 'auth.login_in' | transloco }}</h1>
     <form class="auth-form__container" [formGroup]="this.loginForm" (ngSubmit)="this.onSubmit()">
       <div class="form-container__input">
-        <label for="user_email">{{ 'user_name' | transloco }}</label>
+        <label for="user_email">{{ 'auth.user_name' | transloco }}</label>
         <input type="email" id="user_email" formControlName="user_email" />
         <div
           class="form-container__input__error__message"
@@ -13,7 +13,7 @@
               this.loginForm.controls['user_email'].dirty)
           "
         >
-          <span>{{ 'required_field' | transloco }}</span>
+          <span>{{ 'auth.required_field' | transloco }}</span>
         </div>
         <div
           class="form-container__input__error__message"
@@ -23,11 +23,11 @@
               this.loginForm.controls['user_email'].dirty)
           "
         >
-          <span>E-mail invalido</span>
+          <span>{{ 'auth.invalid_email' | transloco }}</span>
         </div>
       </div>
       <div class="form-container__input">
-        <label for="user_password">{{ 'password' | transloco }}</label>
+        <label for="user_password">{{ 'auth.password' | transloco }}</label>
         <input
           type="password"
           id="user_password"
@@ -41,7 +41,7 @@
               this.loginForm.controls['user_password'].dirty)
           "
         >
-          <span>{{ 'required_field' | transloco }}</span>
+          <span>{{ 'auth.required_field' | transloco }}</span>
         </div>
       </div>
       <div class="form-container__actions">

@@ -1,0 +1,9 @@
+{
+  "forgot_your_password": "Forgot your password",
+  "go_back_login": "Go back login",
+  "invalid_email": "Invalid email",
+  "message": "Lost your password? Please enter your email address. You will receive a link to create a new password via email.",
+  "required_field": "Required field",
+  "reset_password": "Reset password",
+  "user_email": "User email"
+}

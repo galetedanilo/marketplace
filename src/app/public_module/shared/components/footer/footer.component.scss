@@ -1,7 +1,54 @@
-@import 'helper';
+@import "helper";
 
 footer {
-  background-color: $footer_bg_color;
-  height: 10rem;
+  color: $white-color;
   width: 100%;
+
+  .footer-navegations {
+    background-color: $footer_bg_color;
+    display: flex;
+    min-height: 10rem;
+    padding: 1rem;
+
+    &__container {
+      padding: 1rem;
+      width: 33%;
+      p {
+        padding-top: 1.5rem;
+        text-align: justify;
+      }
+      span {
+        color: aqua;
+      }
+      ul {
+        padding-top: 1rem;
+        li {
+          padding: 0.7rem;
+          i {
+            padding-left: 0.8rem;
+          }
+        }
+      }
+
+      &__social__links {
+        
+          li {
+            display: inline;
+
+            a {
+              cursor: pointer;
+            }
+          }
+        
+      }
+      
+    }
+  }
+
+  .footer-informations {
+    background-color: $footer_br_color_secondary;
+    height: 2.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+  }
 }

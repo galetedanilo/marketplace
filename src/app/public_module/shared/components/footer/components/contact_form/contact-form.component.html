@@ -1,0 +1,43 @@
+<form [formGroup]="this.contactForm">
+  <div class="form-container__input">
+    <input type="email" id="email" formControlName="email" />
+    <div
+      class="form-container__input__error__message"
+      *ngIf="
+        this.contactForm.get('email')?.hasError('required') &&
+        (this.contactForm.controls['email'].touched ||
+          this.contactForm.controls['email'].dirty)
+      "
+    >
+      <span>{{ "footer.required_field" | transloco }}</span>
+    </div>
+    <div
+      class="form-container__input__error__message"
+      *ngIf="
+        this.contactForm.get('email')?.hasError('email') &&
+        (this.contactForm.controls['email'].touched ||
+          this.contactForm.controls['email'].dirty)
+      "
+    >
+      <span>{{ "footer.invalid_email" | transloco }}</span>
+    </div>
+    <div class="form-container__input">
+      <textarea rows="3" formControlName="content"></textarea>
+      <div
+      class="form-container__input__error__message"
+      *ngIf="
+        this.contactForm.get('content')?.hasError('required') &&
+        (this.contactForm.controls['content'].touched ||
+          this.contactForm.controls['content'].dirty)
+      "
+    >
+      <span>{{ "footer.required_field" | transloco }}</span>
+    </div>
+    </div>
+    <div class="form-container__actions">
+      <button type="submit" [disabled]="this.contactForm.invalid">
+        {{ "footer.send" | transloco }}
+      </button>
+    </div>
+  </div>
+</form>

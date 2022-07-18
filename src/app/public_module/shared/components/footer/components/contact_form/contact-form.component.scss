@@ -1,0 +1,9 @@
+@import 'helper';
+
+form {
+  padding: 0 1rem;
+
+  .form-container__actions {
+    justify-content: flex-end;
+  }
+}

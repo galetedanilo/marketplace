@@ -32,7 +32,7 @@ describe('PublicComponent', () => {
     it('should find app-header-nav-pub element in fixture', () => {
       const publicComponentDebug: DebugElement = fixture.debugElement;
       const appHeaderNavPubElemen: DebugElement = publicComponentDebug.query(
-        By.css('app-header-nav-pub')
+        By.css('app-header')
       );
       const appHeaderNavPub: HTMLElement = appHeaderNavPubElemen.nativeElement;
 

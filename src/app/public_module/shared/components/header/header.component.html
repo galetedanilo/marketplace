@@ -1,5 +1,12 @@
 <header>
-  <nav>
-    
-  </nav>
+  <div class="header-container">
+    <div class="header-container__logo">
+      <a [routerLink]="['/home']"><h2>Web<span>Shoes</span></h2></a>
+    </div>
+    <div class="header-container__user__container">
+      <a [routerLink]="['/auth']">{{ 'header.login_in' | transloco }}</a>
+      <fa-icon [icon]="this.faUser"></fa-icon>
+    </div>
+  </div>
 </header>
+<app-navbar></app-navbar>

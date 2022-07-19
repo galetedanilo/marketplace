@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .form-container {
   &__input {
     padding-top: 1.5rem;
@@ -51,7 +55,7 @@
       text-decoration: none;
     }
 
-    button[type=submit] {
+    button {
       font-weight: bold;
       height: 2rem;
       min-width: 6rem;

@@ -11,4 +11,8 @@ export class ContactFormComponent {
     email: new FormControl('', [Validators.required, Validators.email]),
     content: new FormControl('', Validators.required)
   });
+
+  clearForm(): void {
+    this.contactForm.reset();
+  }
 }

@@ -35,12 +35,5 @@ describe('HeaderNavComponent', () => {
 
       expect(header).toBeTruthy();
     });
-
-    it('should find the <nav> element in fixture', () => {
-      const navElement: DebugElement = headerNavDebug.query(By.css('nav'));
-      const nav: HTMLElement = navElement.nativeElement;
-
-      expect(nav).toBeTruthy();
-    });
   });
 });

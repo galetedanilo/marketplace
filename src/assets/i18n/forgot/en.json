@@ -5,5 +5,6 @@
   "message": "Lost your password? Please enter your email address. You will receive a link to create a new password via email.",
   "required_field": "Required field",
   "reset_password": "Reset password",
-  "user_email": "User email"
+  "user_email": "User email",
+  "your_email_at_email_dot_com": "your_email@email.com"
 }

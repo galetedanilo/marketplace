@@ -5,5 +5,7 @@
   "login_in": "Entrar no sistema",
   "password": "Senha",
   "required_field": "Campo obrigatório",
-  "user_name": "Nome de usuário"
+  "user_name": "Nome de usuário",
+  "your_user_email": "Seu e-mail de usuário",
+  "your_user_password": "Sua senha de usuário"
 }

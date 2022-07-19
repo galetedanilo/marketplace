@@ -1,6 +1,6 @@
 <form [formGroup]="this.contactForm">
   <div class="form-container__input">
-    <input type="email" id="email" formControlName="email" />
+    <input type="email" id="email" placeholder="{{ 'footer.your_email_at_email_dot_com' | transloco }}" formControlName="email" />
     <div
       class="form-container__input__error__message"
       *ngIf="
@@ -22,7 +22,7 @@
       <span>{{ "footer.invalid_email" | transloco }}</span>
     </div>
     <div class="form-container__input">
-      <textarea rows="3" formControlName="content"></textarea>
+      <textarea rows="3" placeholder="{{ 'footer.content' | transloco }}" formControlName="content"></textarea>
       <div
       class="form-container__input__error__message"
       *ngIf="
@@ -35,6 +35,7 @@
     </div>
     </div>
     <div class="form-container__actions">
+      <button type="button" (click)="this.clearForm()">{{ "footer.clear" | transloco }}</button>
       <button type="submit" [disabled]="this.contactForm.invalid">
         {{ "footer.send" | transloco }}
       </button>

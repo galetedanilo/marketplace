@@ -5,7 +5,7 @@ footer {
   width: 100%;
 
   .footer-navegations {
-    background-color: $footer_bg_color;
+    background-color: $bg_secondary_color;
     display: flex;
     min-height: 10rem;
     padding: 1rem;
@@ -46,7 +46,7 @@ footer {
   }
 
   .footer-informations {
-    background-color: $footer_br_color_secondary;
+    background-color: $bg_primary_color;
     height: 2.5rem;
     padding-top: 1.5rem;
     text-align: center;

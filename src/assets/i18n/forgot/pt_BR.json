@@ -2,8 +2,9 @@
   "forgot_your_password": "Esqueceu sua senha",
   "go_back_login": "Voltar ao login",
   "invalid_email": "E-mail inválido",
-  "message": "Esqueceu sua senha? Por favor, informe o seu endereço de e-mail. Você receberá um link para criar uma nova senha por e-mail.",
+  "message": "Esqueceu sua senha? Por favor, informe o seu endereço de email. Você receberá um link para criar uma nova senha por email.",
   "required_field": "Campo obrigatório",
   "reset_password": "Resetar senha",
-  "user_email": "E-mail do usuário"
+  "user_email": "E-mail do usuário",
+  "your_email_at_email_dot_com": "seu_email@email.com"
 }

@@ -1,0 +1,20 @@
+<section>
+  <div class="card-container">
+    <div class="card-container__image">
+      <img [src]="this.imageUrl">
+    </div>
+    <div class="card-container__title">
+      <h3>{{ this.title }}</h3>
+    </div>
+    <div class="card-container__amount">
+      {{ this.amount | currency }}
+    </div>
+    <div class="card-container__description">
+      <p>{{ this.description }}</p>
+    </div>
+    <div class="card-container__actions__buttons">
+      <button>Saiba mais</button>
+      <button>Add no carrinho</button>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,4 @@
-<form [formGroup]="this.contactForm">
+<form [formGroup]="this.contactForm" (ngSubmit)="this.onSubmit()">
   <div class="form-container__input">
     <input type="email" id="email" placeholder="{{ 'footer.your_email_at_email_dot_com' | transloco }}" formControlName="email" />
     <div

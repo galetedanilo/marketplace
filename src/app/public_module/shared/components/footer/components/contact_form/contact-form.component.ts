@@ -2,8 +2,9 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { IContactFormService } from './interfaces/contact-form-service.interface';
-import { ContactResponse } from './interfaces/contatc-response.interface';
+
+import { ContactMessage } from './classes/contact-message.class';
+import { ContactMessageResponse } from './interfaces/contact-message-response.interface';
 
 @Component({
   selector: 'app-contact-form',
@@ -18,23 +19,25 @@ export class ContactFormComponent implements OnDestroy {
     content: new FormControl('', Validators.required),
   });
 
-  constructor(private _http: IContactFormService) {}
+  constructor(private _contactMessageService: ContactMessage) {}
 
   clearForm(): void {
     this.contactForm.reset();
   }
 
   onSubmit(): void {
-    this.subscription = this._http
+    this._contactMessageService
       .sendContactMessage(this.contactForm.value)
       .subscribe({
-        next: (ok: ContactResponse) => {
-          this.contactForm.reset();
+        next: (data: ContactMessageResponse) => {
+          console.log(data)
         },
-        error: (error: HttpErrorResponse) => {},
+        error: (error: HttpErrorResponse) => {
+          console.log(error);
+        },
         complete: () => {
           this.ngOnDestroy();
-        },
+        }
       });
   }
 

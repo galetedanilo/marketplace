@@ -1,14 +1,11 @@
 import { Component, Input } from "@angular/core";
+import { CardResponseInterface } from "./interfaces/card-response.interface";
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-card[card]',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  @Input() id!: string
-  @Input() imageUrl!: string;
-  @Input() title!: string;
-  @Input() amount!: number;
-  @Input() description!: string;
+  @Input() card!: CardResponseInterface;
 }

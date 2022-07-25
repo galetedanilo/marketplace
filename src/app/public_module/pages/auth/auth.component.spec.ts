@@ -1,6 +1,8 @@
-import { NO_ERRORS_SCHEMA } from "@angular/core"
-import { ComponentFixture, TestBed } from "@angular/core/testing"
-import { AuthComponent } from "./auth.component"
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslocoTestingModule } from '@ngneat/transloco';
+
+import { AuthComponent } from './auth.component';
 
 describe('AuthComponent', () => {
   let fixture: ComponentFixture<AuthComponent>;
@@ -9,6 +11,7 @@ describe('AuthComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AuthComponent],
+      imports: [TranslocoTestingModule],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents()
   });

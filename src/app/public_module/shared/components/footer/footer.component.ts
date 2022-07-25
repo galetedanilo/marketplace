@@ -1,15 +1,6 @@
 import { Component } from '@angular/core';
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedin, faTwitter, faYoutube
-} from '@fortawesome/free-brands-svg-icons';
-import {
-  faEnvelope,
-  faMapLocation,
-  faPhone
-} from '@fortawesome/free-solid-svg-icons';
-
+import { faFacebook, faInstagram, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faMapLocation, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { TRANSLOCO_SCOPE } from '@ngneat/transloco';
 
 @Component({

@@ -1,5 +1,6 @@
 import { NO_ERRORS_SCHEMA } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing"
+import { TranslocoModule } from "@ngneat/transloco";
 import { ForgotPasswordComponent } from "./forgot-password.component"
 
 describe('ForgotPasswordComponent', () => {
@@ -9,7 +10,7 @@ describe('ForgotPasswordComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ForgotPasswordComponent],
-      providers: [],
+      imports: [TranslocoModule],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   })

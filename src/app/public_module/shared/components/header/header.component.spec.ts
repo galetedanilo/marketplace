@@ -1,6 +1,7 @@
 import { DebugElement, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { TranslocoModule } from '@ngneat/transloco';
 
 import { HeaderComponent } from './header.component';
 
@@ -12,6 +13,7 @@ describe('HeaderNavComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [HeaderComponent],
+      imports: [TranslocoModule],
       schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
